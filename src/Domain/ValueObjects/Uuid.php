@@ -23,7 +23,7 @@ abstract class Uuid implements Id
         return $this->uuid === $uuid->__toString();
     }
 
-    public function bytes(): string
+    public function getBytes(): string
     {
         return UuidGenerator::fromString($this->uuid)->getBytes();
     }
@@ -35,7 +35,7 @@ abstract class Uuid implements Id
 
     public static function toBytes(string $uid): string
     {
-        return (new static($uid))->bytes();
+        return (new static($uid))->getBytes();
     }
 
     public function __toString()

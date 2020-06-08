@@ -48,6 +48,9 @@ abstract class IntId implements Id
         return $id instanceof static ? $id : new static($id);
     }
 
+    /**
+     * @inheritDoc
+     */
     public function jsonSerialize()
     {
         return (string) $this->id;

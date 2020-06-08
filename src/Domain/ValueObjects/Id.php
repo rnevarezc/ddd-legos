@@ -4,9 +4,7 @@ declare(strict_types=1);
 
 namespace Ddd\Domain\ValueObjects;
 
-use JsonSerializable;
-
-interface Id extends JsonSerializable
+interface Id extends ValueObject
 {
     /**
      * Default Constructor
@@ -21,13 +19,6 @@ interface Id extends JsonSerializable
      * @return void
      */
     public function get();
-
-    /**
-     * Get an string representation
-     *
-     * @return string
-     */
-    public function __toString();
 
     /**
      * Get an Id instance from an uncasted $id 

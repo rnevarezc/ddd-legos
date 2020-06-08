@@ -10,7 +10,7 @@ use Psr\Http\Message\ServerRequestInterface;
 /**
  * Concrete DataTransfer common class just to avoid hard dependencies.
  */
-abstract class BaseCommand extends DataTransferObject implements Command
+abstract class DtoCommand extends DataTransferObject implements Command
 {
     /**
      * Create a Command from a Psr\Http\Message\ServerRequestInterface

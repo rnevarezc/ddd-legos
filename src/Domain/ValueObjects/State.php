@@ -4,15 +4,8 @@ declare(strict_types=1);
 
 namespace Ddd\Domain\ValueObjects;
 
-interface State
+interface State extends ValueObject
 {
-    /**
-     * Get an string representation
-     *
-     * @return string
-     */
-    public function __toString();
-
     /**
      * Get State Value
      *
