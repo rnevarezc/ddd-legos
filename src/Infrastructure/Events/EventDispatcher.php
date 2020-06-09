@@ -1,6 +1,6 @@
 <?php
 
-namespace Infrastructure\Common\Events;
+namespace Ddd\Infrastructure\Events;
 
 use Ddd\Domain\Events\EventCollector;
 use Ddd\Domain\Events\EventDispatcher as EventDispatcherInterface;

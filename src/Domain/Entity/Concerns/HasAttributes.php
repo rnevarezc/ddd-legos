@@ -38,7 +38,7 @@ trait HasAttributes
             $getter = $this->getAccessor($key, 'get');
             $value = !$getter ?$this->$key :$this->$getter();
             
-            if (!empty($value)){
+            if (isset($value)){
                 $data[$key] = $value;
             }
         }

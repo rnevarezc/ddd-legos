@@ -4,10 +4,9 @@ declare(strict_types=1);
 
 namespace Ddd\Domain\Events;
 
-use Illuminate\Contracts\Support\Arrayable;
 use Carbon\CarbonImmutable;
 
-interface Event extends \JsonSerializable, Arrayable
+interface Event extends \JsonSerializable
 {
     /**
      * Get the Event UUID
@@ -29,4 +28,11 @@ interface Event extends \JsonSerializable, Arrayable
      * @return CarbonImmutable
      */
     public function getFiredAt(): CarbonImmutable;
+
+    /**
+     * Get the instance as an array.
+     *
+     * @return array
+     */
+    public function toArray();
 }
