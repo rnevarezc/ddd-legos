@@ -22,6 +22,10 @@ class EventDispatcher implements EventDispatcherInterface
 
     /**
      * Default Constructor
+     * 
+     * This default implementation uses Psr\EventDispatcher\EventDispatcherInterface,
+     * but you could create a different one using a Event Dispatcher based on your.
+     * infrastructure of choice. (Illuminate\Events\Dispatcher) is a common one.
      *
      * @param InfrastructureDispatcher $dispatcher
      * @param EventCollector $collector

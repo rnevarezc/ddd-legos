@@ -14,6 +14,9 @@ abstract class DomainEvent implements Event
 
     public CarbonImmutable $firedAt;
 
+    /**
+     * Default Constructor
+     */
     protected function __construct()
     {
         $this->uuid = new EventId();

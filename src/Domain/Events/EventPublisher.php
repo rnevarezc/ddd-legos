@@ -10,11 +10,22 @@ final class EventPublisher
 
     private $dispatcher;
 
+    /**
+     * Default constructor
+     *
+     * @param EventDispatcher $dispatcher
+     */
     private function __construct(EventDispatcher $dispatcher)
     {
         $this->dispatcher = $dispatcher;
     }
 
+    /**
+     * Boot the Publisher instance
+     *
+     * @param EventDispatcher $dispatcher
+     * @return void
+     */
     public static function boot(EventDispatcher $dispatcher): void
     {
         if (!static::$instance) {
@@ -22,6 +33,12 @@ final class EventPublisher
         }
     }
 
+    /**
+     * Raise an event recording it in the Dispatcher.
+     *
+     * @param Event $event
+     * @return void
+     */
     public static function raise(Event $event): void
     {
         if (!static::$instance) {

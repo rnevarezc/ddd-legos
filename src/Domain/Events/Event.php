@@ -9,7 +9,7 @@ use Carbon\CarbonImmutable;
 interface Event extends \JsonSerializable
 {
     /**
-     * Get the Event UUID
+     * Get the Event Unique Id
      *
      * @return EventId
      */
