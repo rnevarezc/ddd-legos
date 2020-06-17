@@ -6,7 +6,7 @@ namespace Ddd\Domain\Events;
 
 use Carbon\CarbonImmutable;
 
-interface Event extends \JsonSerializable
+interface Event
 {
     /**
      * Get the Event Unique Id
