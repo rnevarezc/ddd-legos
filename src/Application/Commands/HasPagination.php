@@ -6,23 +6,16 @@ namespace Ddd\Application\Commands;
 
 trait HasPagination
 {   
-    protected static $LIMIT = 10;
-
     public ?string $page = '1';
 
-    public function getOffset()
+    public function getOffset(): int
     {
-        return ((int) $this->page - 1 ) * self::$LIMIT;
+        return ((int) $this->page - 1 ) * $this->getLimit();
     }
 
-    public function setLimit(?int $limit)
+    public function getLimit(): int
     {
-        self::$LIMIT = $limit ?? self::$LIMIT;
-    }
-
-    public function getLimit()
-    {
-        return self::$LIMIT;
+        return (int) ( isset($this->limit) ? $this->limit : 10 );
     }
 
     /**
