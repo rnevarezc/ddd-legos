@@ -39,7 +39,7 @@ class Collection extends BaseCollection
      * 
      * @inheritDoc
      */
-    public function offsetSet($key, $value)
+    public function offsetSet($key, $value): void
     {
         if (!$value instanceof Entity ) {
             throw new \InvalidArgumentException("Value must be an Entity");
