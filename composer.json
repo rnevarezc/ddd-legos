@@ -4,7 +4,7 @@
     "type": "library",
     "keywords": ["ddd", "Blocks", "Legos", "Hexagonal"],
     "require": {
-        "php": "^7.4",
+        "php": "^7.4 || ^8.0",
         "beberlei/assert": "^3.2",
         "ramsey/uuid": "^4.0",
         "spatie/data-transfer-object": "^2.2",
@@ -21,7 +21,7 @@
             "email": "r@rnevarez.com"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
             "Ddd\\": "src/"
