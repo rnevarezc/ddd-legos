@@ -61,7 +61,7 @@ trait HasAttributes
     /**
      * @inheritDoc
      */
-    public function jsonSerialize()
+    public function jsonSerialize() : mixed
     {
         return $this->getArrayCopy();
     }

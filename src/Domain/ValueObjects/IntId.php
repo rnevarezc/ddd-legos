@@ -51,7 +51,7 @@ abstract class IntId implements Id
     /**
      * @inheritDoc
      */
-    public function jsonSerialize()
+    public function jsonSerialize() : mixed
     {
         return (string) $this->id;
     }

@@ -103,7 +103,7 @@ abstract class Uuid implements Id
     /**
      * @inheritDoc
      */
-    public function jsonSerialize()
+    public function jsonSerialize() : mixed
     {
         return (string) $this->uuid;
     }

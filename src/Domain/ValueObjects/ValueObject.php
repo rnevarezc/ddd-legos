@@ -14,15 +14,4 @@ interface ValueObject extends JsonSerializable
      * @return string
      */
     public function __toString();
-
-    /**
-     * Serialize an Object to a Json Representation
-     * 
-     * This is useful to be explicitly defined here because we are implementing
-     * a pragmatic approach, and having every ValueObject to be JsonSerializable
-     * is very useful in practice.
-     * 
-     * @inheritDoc
-     */
-    public function jsonSerialize();
 }
